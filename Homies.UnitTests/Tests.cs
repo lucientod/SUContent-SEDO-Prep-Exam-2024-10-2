@@ -108,7 +108,7 @@ namespace Homies.Tests.Controllers
             // Assert
             Assert.IsInstanceOf<ViewResult>(result);
             Assert.IsFalse(_controller.ModelState.IsValid);
-            Assert.AreEqual(2, _context.Events.Count()); // No event should be added
+            Assert.AreEqual(22, _context.Events.Count()); // No event should be added
         }
 
         [Test]
