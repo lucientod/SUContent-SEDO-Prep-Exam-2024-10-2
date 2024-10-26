@@ -2,17 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Restore') {
             steps {
                 bat 'dotnet restore'
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
                 bat 'dotnet build'
             }
         }
-        stage('Deploy') {
+        stage('Run tests') {
             steps {
                 bat 'dotnet test'
             }
